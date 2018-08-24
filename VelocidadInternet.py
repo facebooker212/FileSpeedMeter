@@ -4,9 +4,9 @@ x = "si"
 while (x == "si"):
     VelSubida = float(input("Cual es tu velocidad de subida en megabits? "))
     Conversion = (VelSubida * 1000000)
-    Pregunta = float(input("Tu archivo se mide en Petabytes, Terabytes, Gigabytes, Megabytes o Kilobytes? 1=Petabytes 2=Terabytes 3=Gigabytes 4=Megabytes 5=Kilobytes"))
+    Pregunta = str(input("Tu archivo se mide en Petabytes, Terabytes, Gigabytes, Megabytes o Kilobytes?"))
 
-    if Pregunta == 1:
+    if Pregunta == "Petabytes":
         Peta = int(input("Cuanto pesa tu archivo?"))
         TamPeta = (Peta * 8000000000000000)
         DivisionPeta = (TamPeta / Conversion)
@@ -34,7 +34,7 @@ while (x == "si"):
         if DiasaanosPeta == 1:
             print(respuesta + str(DivisionPeta5))
 
-    elif Pregunta == 2:
+    elif Pregunta == "Terabytes":
         Tera = float(input("Cuanto pesa tu archivo?"))
         TamTera = (Tera * 8000000000000)
         DivisionTera = (TamTera / Conversion)
@@ -62,7 +62,7 @@ while (x == "si"):
         if DiasaanosTera == 1:
             print(respuesta + str(DivisionTera5))
 
-    elif Pregunta == 3:
+    elif Pregunta == "Gigabytes":
         Giga = float(input("Cuanto pesa tu archivo?"))
         TamGiga = (Giga * 8000000000)
         DivisionGiga = (TamGiga / Conversion)
@@ -90,7 +90,7 @@ while (x == "si"):
         if DiasaanosGiga == 1:
             print(respuesta + str(DivisionGiga5))
 
-    elif Pregunta == 4:
+    elif Pregunta == "Megabytes":
         Mega = float(input("Cuanto pesa tu archivo?"))
         TamMega = (Mega * 8000000)
         DivisionMega = (TamMega / Conversion)
@@ -118,7 +118,7 @@ while (x == "si"):
         if DiasaanosMega == 1:
             print(respuesta + str(DivisionMega5))
 
-    elif Pregunta == 5:
+    elif Pregunta == "Kilobytes":
         Kilo = float(input("Cuanto pesa tu archivo?"))
         TamKilo = (Kilo * 8000)
         DivisionKilo = (TamKilo / Conversion)
